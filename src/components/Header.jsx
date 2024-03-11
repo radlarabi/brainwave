@@ -12,11 +12,11 @@ export default function Header(){
     const [toggle, setToggle] = useState(false)
     const toggleHandler = () =>{
         setToggle(!toggle)
-        toggle ? disablePageScroll() : enablePageScroll()
+        toggle ? enablePageScroll() : disablePageScroll() 
     }
     return (
         <>
-            <div className="flex w-full py-[1rem] px-[20px] border-b border-gray-800">
+            <div className="flex w-full py-[1rem] px-[20px] border-b border-gray-800 z-100">
                 <Image 
                     src={brainwave}
                     width={180}
