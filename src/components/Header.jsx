@@ -7,6 +7,7 @@ import Button from "@/components/Button"
 
 import {navigation} from '@/constants/index'
 import { enablePageScroll, disablePageScroll } from "scroll-lock"
+
 export default function Header(){
     const [toggle, setToggle] = useState(false)
     const toggleHandler = () =>{
@@ -15,7 +16,7 @@ export default function Header(){
     }
     return (
         <>
-            <div class="flex w-full py-[1rem] px-[20px] border-b border-gray-800">
+            <div className="flex w-full py-[1rem] px-[20px] border-b border-gray-800">
                 <Image 
                     src={brainwave}
                     width={180}
@@ -33,8 +34,8 @@ export default function Header(){
             </div>
             {
                 toggle && 
-                <div className="lg:hidden w-full px-[1rem] absolute">
-                    <div className="h-[100vh] text-white gap-10 border-x border-gray-800 flex flex-col justify-center items-center text-2xl uppercase text-n-1 transition-colors hover:text-color-1 px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:text-n-1/50 lg:leading-5 lg:hover:text-n-1 xl:px-12">
+                <div className="lg:hidden w-full px-[1rem] absolute bg-[#080312] --font-code-pro">
+                    <div className="h-[90vh] bg-[#080312] text-white gap-10 border-x border-gray-800 flex flex-col justify-center items-center text-2xl uppercase text-n-1 transition-colors hover:text-color-1 px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:text-n-1/50 lg:leading-5 lg:hover:text-n-1 xl:px-12">
                         {navigation.map((item, key) => (
                             <a key={key} href={item.url}>
                                 {item.title}

@@ -1,10 +1,16 @@
-import { Inter, Source_Code_Pro} from "next/font/google";
+import { Inter, Source_Code_Pro, Sora} from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header"
-import Hero from "@/components/Hero"
-import ButtonGradient from "../assets/svg/ButtonGradient"
-const inter = Inter({ subsets: ["latin"] });
-const sc = Source_Code_Pro({ subsets: ["latin"] });
+
+const inter = Inter({
+  subsets: ["latin"], variable: "--font-inter" 
+});
+const sora = Sora({
+  subsets: ["latin"], variable: "--font-sora" 
+});
+const sc = Source_Code_Pro({
+  subsets: ["latin"], variable: "--font-code-pro"  
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -14,8 +20,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={` ${sc.className} ${inter.className}`}>
-        <div className="fixed w-full">
+      <body className={`${sc.variable} ${inter.variable} ${sora.variable}`}>
+        <div className="w-full">
           <Header/>
         </div>
         {children}
