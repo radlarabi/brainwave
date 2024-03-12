@@ -1,20 +1,28 @@
 import React from 'react'
 import {BackgroundCircles, HamburgerMenu} from "@/components/design/Header"
 import Image from 'next/image'
-import { curve, robot, loading } from '@/assets'
+import { curve, robot, loading , heroBackground} from '@/assets'
 import Button from './Button'
-
+import HeroImage from './HeroImage'
+const svgGradiant = () => (
+    <>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"  viewBox="0 0 700 700" width="700" height="700" opacity="0.64">
+            
+        </svg>
+    </>
+)
 const Hero = () => {
   return (
-    <div className='px-[18px] md:mx-[2vw] md:border-x border-gray-800'>
+    <div className='relative px-[18px] md:mx-[2vw] md:border-x border-gray-800'>
         {/* <div className="opacity-20 block overflow-hidden">
             <HamburgerMenu/>
         </div> */}
         <div className="hidden lg:block overflow-hidden">
             <BackgroundCircles/>
         </div>
-        <div className=" mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-            <div className="text-center flex flex-col justify-center items-center pt-[8rem]  text-white font-sora ">
+
+        <div className="relative mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] w-full">
+            <div className="text-center flex flex-col justify-center items-center pt-[8rem]  text-white font-sora max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
                 <h1 className='lg:text-6xl text-[2.5rem] md:text-[2.75rem] font-semibold mb-6'>
                     Explore the Possibilities of&nbsp;AI&nbsp;Chatting with{" "}
                     <span className='relative'>
@@ -25,7 +33,7 @@ const Hero = () => {
                             width={624}
                             height={28}
                             alt='curv'
-                        />
+                            />
                     </span>
                 </h1>
                 <p className='lg:text-xl text-sm text-center max-w-3xl mx-auto font-[0.8rem] leading-6 mb-6 text-[#CAC9C6]'>
@@ -33,37 +41,37 @@ const Hero = () => {
                 </p>
                 <div className="flex justify-center">
                     <Button
-                        className={"bg-white text-black text-xs font-code-pro font-bold w-auto inline-flex justify-center items-center h-11 px-6 tracking-wider"}
+                        className={"bg-white text-black hover:bg-slate-700 text-xs font-code-pro font-bold w-auto inline-flex justify-center items-center h-11 px-6 tracking-wider "}
                         >
                         GET STARTED
                     </Button>
                 </div>
             </div>
-        </div>
-        <div className="relative flex justify-center customGradient rounded-2xl overflow-hidden h-[30rem] md:h-[43rem]">
-            <div className="absolute  mx-[2px] my-[2px] text-white bottom-[5rem] md:bottom-[6rem] w-[90%] md:w-[60%] z-10 bg-black/65 rounded-3xl flex items-center h-[12%] md:h-[8%] px-6">
-                <Image
-                    className='w-5 h-5 mr-5'
-                    src={loading}
-                    width={0}
-                    height={0}
-                    alt='curv'
-                />
-                AI is generating
-            </div>
-            <div className="absolute  mx-[2px] my-[2px] rounded-[1.1rem] overflow-hidden h-[99%] w-[90%] bg-gradient-to-r from-[#594E45] to-[#573C60] z-100"/>
-            <div className="absolute  mx-[2px] my-[2px] rounded-[1.1rem] overflow-hidden h-[95%] w-[94%] bg-[#1B1B2E] "/>
-            <div className="mx-[2px] my-[2px] rounded-[1.1rem] overflow-hidden h-[90%]">
-                <Image
-                    className='rounded-[1.1rem] md:scale-[1]  md:-translate-y-[10%] scale-[1.6] translate-y-5 '
-                    src={robot}
-                    width={0}
-                    height={0}
-                    alt='curv'
-                />
-            </div>
+        <div className="absolute -translate-y-[30%] translate-x-[10%] -z-50">
+            {/* <svg className='' xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 700 700" width="700" height="700" opacity="0.64"><defs><radialGradient id="ffflux-gradient">
+                <stop offset="0%" stop-color="hsl(315, 100%, 72%)"></stop>
+                    <stop offset="100%" stop-color="hsl(203, 80%, 10%)"></stop>
+                    </radialGradient><filter id="ffflux-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feTurbulence type="fractalNoise" baseFrequency="0.001 0.001" numOctaves="2" seed="33" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence>
+                <feGaussianBlur stdDeviation="0 0" x="0%" y="0%" width="100%" height="100%" in="turbulence" edgeMode="duplicate" result="blur"></feGaussianBlur>
+                <feBlend mode="color-burn" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" in2="blur" result="blend"></feBlend>
                 
+                </filter></defs><rect width="700" height="700" fill="url(#ffflux-gradient)" filter="url(#ffflux-filter)"></rect></svg> */}
+                <Image
+                    src={heroBackground}
+                    width={1440}
+                    height={1800}
+                />
         </div>
+        </div>
+        <HeroImage/>
+        <div className="hidden absolute md:block left-1/2 top-[40rem] w-fit aspect-square border  rounded-full opacity-15">
+            <div className='absolute top-1/2 left-1/2 w-[46.875rem] md:w-[46.875rem]  xl:w-[65.875rem] aspect-square border   rounded-full -translate-x-1/2 -translate-y-1/2'/>
+            <div className='absolute top-1/2 left-1/2 w-[35.875rem] md:w-[40.875rem]  xl:w-[50.875rem] aspect-square border   rounded-full -translate-x-1/2 -translate-y-1/2'/>
+            <div className='absolute top-1/2 left-1/2 w-[26.875rem] md:w-[30.875rem]  xl:w-[40.875rem] aspect-square border   rounded-full -translate-x-1/2 -translate-y-1/2'/>
+            <div className='absolute top-1/2 left-1/2 w-[16.875rem] md:w-[16.875rem]  xl:w-[26.875rem] aspect-square border   rounded-full -translate-x-1/2 -translate-y-1/2'/>
+        </div>
+        
     </div>
   )
 }
