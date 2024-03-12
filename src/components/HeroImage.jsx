@@ -1,5 +1,6 @@
 import React from 'react'
-import { curve, robot, loading } from '@/assets'
+import { curve, robot, loading, gradient } from '@/assets'
+import name from '../assets/hero/name.jpg'
 import Image from 'next/image'
 const HeroImage = () => {
   return (

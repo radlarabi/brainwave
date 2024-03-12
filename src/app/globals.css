@@ -76,3 +76,9 @@ body {
   stroke-dashoffset: -134;
   stroke-width: 6;
 }
+.underlineBackGround :hover{
+  background-image: url('../assets/benefits/image-2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .5;
+}
