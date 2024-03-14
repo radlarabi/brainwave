@@ -1,6 +1,6 @@
 import { brainwaveWhiteSymbol, gradient, play } from "../../assets";
 import ChatBubbleWing from "../../assets/svg/ChatBubbleWing";
-
+import Image from "next/image";
 export const Gradient = () => {
   return (
     <div className="absolute top-0 -left-[10rem] w-[56.625rem] h-[56.625rem] opacity-50 mix-blend-color-dodge pointer-events-none">
@@ -50,7 +50,7 @@ export const VideoChatMessage = () => {
 export const VideoBar = () => {
   return (
     <div className="absolute left-0 bottom-0 w-full flex items-center p-6">
-      <img
+      <Image
         src={play}
         width={24}
         height={24}
@@ -59,7 +59,7 @@ export const VideoBar = () => {
       />
 
       <div className="flex-1 bg-[#D9D9D9]">
-        <div className="w-1/2 h-0.5 bg-color-1"></div>
+        <div className="w-1/2 h-0.5 bg-[#AC6AFF]"></div>
       </div>
     </div>
   );
