@@ -50,7 +50,7 @@ const Services = () => {
                 />
             </div>
         </div>
-        <div className="relative grid lg:grid-cols-2 lg:space-x-6">
+        <div className="relative lg:grid lg:grid-cols-2 lg:space-x-6">
             <div className="card1 py-4 lg:py-0">
                 <div className="relative overflow-hidden border rounded-3xl border-gray-700 min-h-[39rem]">
                     <div className="absolute top-0 right-0 lg:w-auto w-full h-full md:w-3/5 -z-10">
@@ -81,7 +81,7 @@ const Services = () => {
             </div>
             <div className="card2">
                 <div className="relative border rounded-3xl border-gray-700 min-h-[39rem]">
-                    <div className="py-12 px-8 lg:mx-6 lg:mb-12">
+                    <div className="pt-12 px-8 lg:mx-6 lg:mb-12">
                         <h1 className='text-3xl lg:text-5xl w-full text-start font-sora'>Video generation</h1>
                         <p className='mt-4 text-start w-full text-base text-gray-300'>The world’s most powerful AI photo and video art generation engine. What will you create?</p>
                         <div className="flex flex-row justify-between my-5">
@@ -109,9 +109,10 @@ const Services = () => {
                                 <div className="absolute bottom-0 w-full">
                                     <VideoBar/>
                                 </div>
-                                <div className="absolute bg-black max-w-[15rem] top-8 left-[3rem] px-8 py-3 md:py-4 rounded-t-3xl rounded-br-3xl">
-                                    <h5 className=''>Video generated!</h5>
-                                    <ChatBubbleWing className="absolute bottom-0 -left-6 scale-x-[-1]"/>
+                                <div className="absolute bg-[#252134] max-w-[15rem] top-8 left-[3rem] px-8 py-3 md:py-4 rounded-t-2xl rounded-br-2xl">
+                                    <h5 className='font-code-pro text-base'>Video generated!</h5>
+                                    <ChatBubbleWing className="absolute fill-[#252134] bottom-0 -left-6 scale-x-[-1]"/>
+                                    <div className="absolute text-[10px] bottom-1 right-1 font-extralight">JUST NOW</div>
                                 </div>
                             </div>
                         </div>

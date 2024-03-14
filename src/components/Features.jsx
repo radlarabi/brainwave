@@ -3,9 +3,10 @@ import React, { useState } from 'react'
 import {benefits} from '@/constants'
 import Image from 'next/image'
 import Arrow from '@/assets/svg/Arrow'
-
+import {benefitImage2} from "@/assets" 
 const Features = () => {
     const [isHover, setIsHover] = useState(false)
+    const [hoverIndex, setHoverIndex] = useState(0)
     return (
         <div className='mt-10'>
             <h2 className='text-white text-3xl md:text-5xl max-w-md lg:max-w-[50rem] lg:text-center mx-auto font-medium mb-12'>
@@ -15,15 +16,24 @@ const Features = () => {
                 {
                     benefits.map((item, index) => (
                         <div
-                            onMouseEnter={() => setIsHover(true)}
+                            onMouseEnter={() => {setIsHover(true); setHoverIndex(index)}}
                             onMouseLeave={() => setIsHover(false)}
                             key={index} 
-                            className="text-white flex flex-col min-h-[22rem] md:max-w-[24rem] p-[2.4rem] bg-blue-900/5 my-4 mx-2 rounded-xl hover:bg-blue-900/20 bg-[url('')]"
+                            className="relative overflow-hidden  text-white flex flex-col min-h-[22rem] md:max-w-[24rem] p-[2.4rem] bg-blue-900/5 my-4 mx-2 rounded-xl"
                         >
-                            {/* {
-                                isHover && 
-                                <div className='absolute bg-blue-600 w-full h-full'/>
-                            } */}
+                            {
+                                isHover && index == hoverIndex &&  
+                                <div key={index} className="mx-auto absolute w-full h-full top-0 letf-0 opacity-10 -z-50">
+                                    <Image
+                                        className='w-full h-full object-cover'
+                                        src={benefitImage2}
+                                        width={350}
+                                        height={350}
+                                    />
+                                </div>
+                            }
+                            {/* 
+                            <div className='absolute bg-blue-600 w-full h-full'/> */}
                             <h5 className='text-2xl mb-5 '>
                                 {item.title}
                             </h5>
