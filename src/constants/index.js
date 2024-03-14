@@ -56,21 +56,23 @@ export const navigation = [
     id: "3",
     title: "Roadmap",
     url: "#roadmap",
-  },
+  }
+];
+export const navigationButton = [
   {
-    id: "4",
+    id: "1",
     title: "New account",
     url: "#signup",
     onlyMobile: true,
   },
   {
-    id: "5",
+    id: "2",
     title: "Sign in",
     url: "#login",
     onlyMobile: true,
   },
-];
 
+];
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
@@ -153,6 +155,7 @@ export const collabApps = [
     icon: figma,
     width: 26,
     height: 36,
+    top: 10,
   },
   {
     id: "1",

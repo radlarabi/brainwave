@@ -36,7 +36,7 @@ const Features = () => {
                                     width={50}
                                     height={50}
                                 />
-                                <p className=' uppercase ml-auto font-code-pro'>Explore more</p>
+                                <p className='text-xs font-bold uppercase ml-auto font-code-pro'>Explore more</p>
                                 <div className="m-2 bg-blue z-50">
                                     <Arrow/>
                                 </div>
