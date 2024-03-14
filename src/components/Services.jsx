@@ -4,9 +4,10 @@ import {brainwaveServices, brainwaveServicesIcons} from "@/constants"
 import ChatBubbleWing from "@/assets/svg/ChatBubbleWing"
 import {VideoBar} from "@/components/design/Services"
 import Image from 'next/image'
+
 const Services = () => {
   return (
-    <div className='mx-auto max-w-[85rem] text-white pt-10'>
+    <div className='mx-auto max-w-[85rem] text-white py-10'>
         <div className="lg:mx-6 lg:mb-12">
             <h1 className='text-3xl lg:text-5xl w-full md:text-center text-start font-sora'>Generative AI made for creators.</h1>
             <p className='mt-4 md:text-center text-start w-full text-base text-[#757185]'>Brainwave unlocks the potential of AI-powered applications</p>

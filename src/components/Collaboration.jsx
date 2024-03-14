@@ -43,7 +43,7 @@ const Collaboration = () => {
                 />
                 <h5 className=''>Top-notch Security</h5>
             </div>
-            <Button className="uppercase px-6 py-3 text-sm font-code-pro font-semibold">
+            <Button className="uppercase px-6 py-3 text-sm font-code-pro font-semibold" border>
                 Try it Now
             </Button>
         </div>

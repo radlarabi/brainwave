@@ -15,15 +15,15 @@ export default function Header(){
         toggle ? enablePageScroll() : disablePageScroll() 
     }
     return (
-        <div className="md:mx-4 lg:mx-4">
-            <div className="flex w-full py-[1rem] px-[20px] border-b border-gray-800 z-100">
+        <div className="lg:fixed lg:w-full z-[100] lg:bg-gray-900/30 lg:backdrop-blur-sm">
+            <div className="flex w-full py-[1rem] lg:px-8 px-[20px] border-b border-gray-800 z-100">
                 <Image 
                     src={brainwave}
                     width={180}
                     height={40}
                 />
                 <div className="lg:hidden ml-auto text-white">
-                    <Button className={`menu text-white ${toggle ? 'opened' : ''}`} onClick={toggleHandler}>
+                    <Button className={`menu text-white ${toggle ? 'opened' : ''}`} onClick={toggleHandler} border>
                         <svg width="40" height="40" viewBox="0 0 100 100" stroke="#9E94C9">
                             <path className="line line1"  d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
                             <path className="line line2"  d="M 20,50 H 80" />
@@ -41,7 +41,7 @@ export default function Header(){
                 <div className="font-code-pro text-gray-300 hidden lg:flex ml-auto uppercase text-xs font-bold ">
                     {navigationButton.map((item, key) => (
                         key == 1 ? 
-                        <Button key={key} href={item.url} className="h-full px-4 text-white">
+                        <Button key={key} href={item.url} className="h-full px-4 text-white" border>
                             {item.title}
                         </Button>
                         :
