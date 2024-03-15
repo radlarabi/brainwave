@@ -6,7 +6,7 @@ import { loading1, check2, grid } from '@/assets'
 import Button from './Button'
 const Roadmap = () => {
   return (
-    <div className='py-20 text-white'>
+    <div className='py-20 text-white' id="Roadmap">
 		<div className="py-20 mb-20">
 			<div className="flex flex-col justify-start md:justify-center">
 					<div className="flex md:justify-center mb-4">

@@ -8,7 +8,7 @@ import {LeftCurve} from '@/components/design/Collaboration'
 
 const Collaboration = () => {
   return (
-    <div className='px-8 my-12 pb-10 flex flex-col lg:flex-row  justify-center items-center mx-auto max-w-[85rem]'>
+    <div className='px-8 my-12 pb-10 flex flex-col lg:flex-row  justify-center items-center mx-auto max-w-[85rem]' id="Collaboration">
         <div className="text-white max-w-[25rem] ">
             <h1 className='text-3xl md:text-5xl font-medium mb-5 font-sora'>
                 AI Chat App for seamless collaboration

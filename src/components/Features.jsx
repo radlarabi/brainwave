@@ -8,7 +8,7 @@ const Features = () => {
     const [isHover, setIsHover] = useState(false)
     const [hoverIndex, setHoverIndex] = useState(0)
     return (
-        <div className='mt-10'>
+        <div className='mt-10' id="Features">
             <h2 className='text-white text-3xl md:text-5xl max-w-md lg:max-w-[50rem] lg:text-center mx-auto font-medium mb-12'>
                 Chat Smarter, Not Harder with Brainwave
             </h2>

@@ -40,22 +40,22 @@ export const navigation = [
   {
     id: "0",
     title: "Features",
-    url: "#features",
+    url: "#Features",
   },
   {
     id: "1",
     title: "Pricing",
-    url: "#pricing",
+    url: "#Pricing",
   },
   {
     id: "2",
     title: "How to use",
-    url: "#how-to-use",
+    url: "#Services",
   },
   {
     id: "3",
     title: "Roadmap",
-    url: "#roadmap",
+    url: "#Roadmap",
   }
 ];
 export const navigationButton = [

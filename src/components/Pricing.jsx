@@ -6,7 +6,7 @@ import {pricing} from '@/constants'
 import Button from './Button'
 const Pricing = () => {
   return (
-    <div className='py-20 text-white'>
+    <div className='py-20 text-white' id="Pricing">
         <div className="hidden lg:flex lg:justify-center lg:items-start lg:mb-[6rem] ">
             <Image
                 src={smallSphere}

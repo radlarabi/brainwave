@@ -1,12 +1,75 @@
-import React from 'react'
-import { curve, robot, loading, gradient } from '@/assets'
-import name from '../assets/hero/name.jpg'
+import {useState} from 'react'
+import {robot, notification1} from '@/assets'
 import Image from 'next/image'
+import { motion, useScroll, useMotionValueEvent, useSpring } from 'framer-motion'
+import {heroIcons, notificationImages} from "@/constants"
+
 const HeroImage = () => {
-  return (
+    const { scrollY } = useScroll()
+    const [offset, setOffset] = useState(useSpring(0))
+
+    const scaleX = useSpring(scrollY, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
+    useMotionValueEvent(scaleX, "change", (latest) => {
+        console.log("translateY(" + latest / 10 + "%)")
+        setOffset(latest / 30)
+    })
+    //console.log(scaleX);
+    return (
     <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24 z-50">
+        
         <div className='customGradient max-w-[62rem] h-fit rounded-2xl'>
-            <div className="p-[2px] ">
+            <div className="p-[2px] relative">
+                <motion.div 
+                    style={{ transform: `translateY(${offset}%)`}}
+                    className="absolute w-full h-full z-50" >
+                    <div className='hidden xl:flex absolute -right-[5rem] top-1/2 w-[15rem] bg-[#29263A] p-4 rounded-2xl backdrop-blur-md gap-4'>
+                        <div className="">
+                            <Image
+                                className='rounded-lg'
+                                src={notification1}
+                                width={50}
+                                height={50}
+                                />
+                        </div>
+                        <div className="">
+                            <h5 className='text-white font-sora text-sm font-semibold mb-1'>Code generation</h5>
+                            <div className="flex flex-row">
+                                {
+                                    notificationImages.map((item, index) => (
+                                        <div className="">
+                                            <Image 
+                                                className='rounded-full'
+                                                src={item}
+                                                width={20}
+                                                height={20}
+                                            />
+                                        </div>
+                                    ))
+                                }
+                                <h5 className='text-sm ml-auto text-gray-200 font-light '>1min ago</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='hidden xl:flex absolute -left-[5rem] top-1/2 w-[15rem] bg-[#29263A]/50 py-5 rounded-2xl backdrop-blur-md'>
+                        <div className="flex flex-row justify-between items-center w-full h-full px-5">
+                            {
+                                heroIcons.map((item ,key) => (
+                                    <div key={key} className="">
+                                        <Image
+                                            src={item}
+                                            width={24}    
+                                            height={24}
+                                        />    
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </motion.div>
                 <div className='bg-[#43435C] h-[1.4rem] rounded-t-[0.9rem]'/>
                 <div className="overflow-hidden aspect-[33/40] md:aspect-[688/490] lg:aspect-[1124/490] rounded-b-[0.9rem]">
                     <Image
