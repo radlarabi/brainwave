@@ -4,6 +4,7 @@ import Collaboration from "@/components/Collaboration"
 import Services from "@/components/Services"
 import Pricing from "@/components/Pricing"
 import Roadmap from "@/components/Roadmap"
+import Footer from "@/components/Footer"
 export default function Home() {
   return (
     <main className="px-[18px] md:mx-[2vw] md:border-x border-gray-800">
@@ -13,6 +14,7 @@ export default function Home() {
       <Services/>
       <Pricing/>
       <Roadmap/>
+      <Footer/>
     </main>
   );
 }
