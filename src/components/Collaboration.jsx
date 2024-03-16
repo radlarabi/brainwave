@@ -2,9 +2,8 @@
 import React from 'react'
 import Image from 'next/image'
 import Button from './Button'
-import {discord, check, curve1, curve2, brainwaveSymbol} from '@/assets'
+import {check, brainwaveSymbol} from '@/assets'
 import {collabApps} from '@/constants'
-import {LeftCurve} from '@/components/design/Collaboration'
 
 const Collaboration = () => {
   return (
@@ -43,7 +42,7 @@ const Collaboration = () => {
                 />
                 <h5 className=''>Top-notch Security</h5>
             </div>
-            <Button className="uppercase px-6 py-3 text-sm font-code-pro font-semibold" border>
+            <Button className="uppercase px-6 py-3 text-sm font-code-pro font-semibold hover:text-fuchsia-700" border>
                 Try it Now
             </Button>
         </div>
@@ -61,7 +60,6 @@ const Collaboration = () => {
                         <div className="">
                             {
                                 collabApps.map((item, key) => (       
-                                    // ${45 * item.id > 180 ? `rotate-${45 * item.id}` : `-rotate-${45 * item.id}`}
                                     <div className={`absolute -py-4 -px-8 top-0 left-1/2 h-1/2 origin-bottom`} key={key} style={{ transform: `rotate(-${45 * item.id}deg)`}}>
                                         <Image
                                             style={{ transform: `rotate(${45 * item.id}deg)`}}

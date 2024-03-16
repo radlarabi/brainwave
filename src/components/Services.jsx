@@ -1,5 +1,5 @@
 import React from 'react'
-import {service1, service2, service3, check, gradient, play} from "@/assets"
+import {service1, service2, service3, check, gradient} from "@/assets"
 import {brainwaveServices, brainwaveServicesIcons} from "@/constants"
 import ChatBubbleWing from "@/assets/svg/ChatBubbleWing"
 import {VideoBar} from "@/components/design/Services"

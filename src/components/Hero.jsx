@@ -1,17 +1,23 @@
 'use client'
-import React from 'react'
-import {BackgroundCircles, HamburgerMenu} from "@/components/design/Header"
+import {useState} from 'react'
 import Image from 'next/image'
-import { curve, robot, loading , heroBackground} from '@/assets'
+import { curve} from '@/assets'
 import Button from './Button'
 import HeroImage from './HeroImage'
 import {companyLogos} from '@/constants'
-import { useScroll } from 'framer-motion'
+import {motion } from 'framer-motion'
+
 const Hero = () => {
-    const { scrollYProgress } = useScroll();
-    console.log(scrollYProgress.getPrevious);
+    const [positionX , setPositionX] = useState(0)
+    const [positionY , setPositionY] = useState(0)
+
     return (
-        <div className='relative ' id="Hero">
+        <motion.div
+            onMouseMove={(event) => {
+                setPositionX(event.clientX)
+                setPositionY(event.clientY)
+            }}
+            className='relative ' id="Hero">
             <div className="relative mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] w-full z-50">
                 <div className="text-center flex flex-col justify-center items-center pt-[8rem]  text-white font-sora max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
                     <h1 className='lg:text-6xl text-[2.5rem] md:text-[2.75rem] font-semibold mb-6'>
@@ -32,14 +38,14 @@ const Hero = () => {
                     </p>
                     <div className="flex justify-center">
                         <Button
-                            className={"bg-white text-black hover:bg-slate-700 text-xs font-code-pro font-bold w-auto inline-flex justify-center items-center h-11 px-6 tracking-wider "}
+                            className={"bg-white text-black hover:text-fuchsia-800 text-xs font-code-pro font-bold w-auto inline-flex justify-center items-center h-11 px-6 tracking-wider "}
                             >
                             GET STARTED
                         </Button>
                     </div>
                 </div>
             </div>
-            <HeroImage/>
+            <HeroImage posX={positionX} posY={positionY}/>
             <div className="hidden absolute md:block left-1/2 top-[40rem] w-fit aspect-square border  rounded-full opacity-15">
                 <div className='absolute top-1/2 left-1/2 w-[46.875rem] md:w-[46.875rem]  xl:w-[65.875rem] aspect-square border   rounded-full -translate-x-1/2 -translate-y-1/2'/>
                 <div className='absolute top-1/2 left-1/2 w-[35.875rem] md:w-[40.875rem]  xl:w-[50.875rem] aspect-square border   rounded-full -translate-x-1/2 -translate-y-1/2'/>
@@ -65,7 +71,7 @@ const Hero = () => {
                 </ul>
 
             </div>
-        </div>
+        </motion.div>
     )
 }
 

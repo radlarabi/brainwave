@@ -3,24 +3,25 @@ import {robot, notification1} from '@/assets'
 import Image from 'next/image'
 import { motion, useScroll, useMotionValueEvent, useSpring } from 'framer-motion'
 import {heroIcons, notificationImages} from "@/constants"
+import {BackgroundCircles} from "@/components/design/Hero"
 
-const HeroImage = () => {
+const HeroImage = ({posX, posY}) => {
     const { scrollY } = useScroll()
-    const [offset, setOffset] = useState(useSpring(0))
+    const [offset, setOffset] = useState(0)
 
-    const scaleX = useSpring(scrollY, {
+    const scaleY = useSpring(scrollY, {
         stiffness: 100,
         damping: 30,
         restDelta: 0.001
     });
-    useMotionValueEvent(scaleX, "change", (latest) => {
-        console.log("translateY(" + latest / 10 + "%)")
+    useMotionValueEvent(scaleY, "change", (latest) => {
         setOffset(latest / 30)
     })
-    //console.log(scaleX);
+
     return (
-    <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24 z-50">
-        
+    <motion.div
+        className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24 -z-50">
+        <BackgroundCircles posX={posX} posY={posY}/>
         <div className='customGradient max-w-[62rem] h-fit rounded-2xl'>
             <div className="p-[2px] relative">
                 <motion.div 
@@ -84,7 +85,7 @@ const HeroImage = () => {
 
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
