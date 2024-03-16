@@ -46,7 +46,7 @@ const Hero = () => {
                 </div>
             </div>
             <HeroImage posX={positionX} posY={positionY}/>
-            <div className="hidden absolute md:block left-1/2 top-[40rem] w-fit aspect-square border  rounded-full opacity-15">
+            <div className="hidden absolute md:block left-1/2 top-[40rem] w-fit aspect-square border  rounded-full opacity-15 -z-[100]">
                 <div className='absolute top-1/2 left-1/2 w-[46.875rem] md:w-[46.875rem]  xl:w-[65.875rem] aspect-square border   rounded-full -translate-x-1/2 -translate-y-1/2'/>
                 <div className='absolute top-1/2 left-1/2 w-[35.875rem] md:w-[40.875rem]  xl:w-[50.875rem] aspect-square border   rounded-full -translate-x-1/2 -translate-y-1/2'/>
                 <div className='absolute top-1/2 left-1/2 w-[26.875rem] md:w-[30.875rem]  xl:w-[40.875rem] aspect-square border   rounded-full -translate-x-1/2 -translate-y-1/2'/>
