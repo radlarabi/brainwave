@@ -38,7 +38,7 @@ const Rings = () => {
 export const BackgroundCircles = ({posX, posY}) => {
 
   return (
-    <motion.div className="absolute w-[78rem] aspect-square -left-[10rem] rounded-full  md:-top-[38.5rem] xl:-top-[32rem]"
+    <motion.div className="hidden xl:flex absolute w-[78rem] aspect-square -left-[10rem] rounded-full  md:-top-[38.5rem] xl:-top-[32rem]"
       style={{ transform: `translate(${posX / 20}px, ${posY / 20}px)`}}
       animate={{
         transition: {duration: 0.05, ease: "easeInOut"}
