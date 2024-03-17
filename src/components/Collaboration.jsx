@@ -18,7 +18,8 @@ const Collaboration = () => {
                     src={check}
                     width={25}
                     height={25}
-                />
+                    alt='check'
+                    />
                 <h5 className=''>Seamless Integration</h5>
             </div>
             <p className='md:text-base text-sm font-extralight py-4 font-sora text-gray-300'>With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter</p>
@@ -29,7 +30,8 @@ const Collaboration = () => {
                     src={check}
                     width={25}
                     height={25}
-                />
+                    alt='check'
+                    />
                 <h5 className=''>Smart Automation</h5>
             </div>
 
@@ -39,7 +41,8 @@ const Collaboration = () => {
                     src={check}
                     width={25}
                     height={25}
-                />
+                    alt='check'
+                    />
                 <h5 className=''>Top-notch Security</h5>
             </div>
             <Button className="uppercase px-6 py-3 text-sm font-code-pro font-semibold hover:text-fuchsia-700" border>
@@ -56,6 +59,7 @@ const Collaboration = () => {
                             src={brainwaveSymbol}
                             width={48}
                             height={48}
+                            alt='brainwaveSymbol'
                         />
                         <div className="">
                             {
@@ -66,6 +70,7 @@ const Collaboration = () => {
                                             src={item.icon}
                                             width={item.width}
                                             height={item.height}
+                                            alt='icon'
                                         />
                                     </div>
                                 ))
@@ -73,21 +78,6 @@ const Collaboration = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div className="hidden absolute top-1/2 right-full w-[32.625rem] -mt-1 mr-10 pointer-events-none xl:block">
-                    <Image 
-                        src={curve1}
-                        width={522}
-                        height={180}
-                        />
-                </div>
-                
-                <div className="opacity-20">
-                    <div className='absolute top-1/2 left-1/2 w-[22rem] aspect-square border   rounded-full -translate-x-1/2 -translate-y-1/2'/>
-                    <div className='absolute top-1/2 left-1/2 w-[12rem] aspect-square border   rounded-full -translate-x-1/2 -translate-y-1/2'/>
-                </div>
-                
-                <div className="">
-                </div> */}
             </div>
         </div>
     </div>

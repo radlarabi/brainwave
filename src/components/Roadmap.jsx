@@ -26,6 +26,7 @@ const Roadmap = () => {
 									src={grid}
 									width={600}
 									height={600}
+									alt='grid'
 								/>
 							</div>
 							<div className="flex items-center p-4">
@@ -44,14 +45,16 @@ const Roadmap = () => {
 										src={check2}
 										width={16}
 										height={16}
-									/> 
-									:
-									<Image
+										alt='grid'
+										/> 
+										:
+										<Image
 										className='mr-1'
 										src={loading1}
 										width={16}
 										height={16}
-									/> 
+										alt='loading'
+										/> 
 									}
 									{item.status}
 								</div>
@@ -60,6 +63,7 @@ const Roadmap = () => {
 								src={item.imageUrl}
 								width={628}
 								height={426}
+								alt='imageUrl'
 							/>
 							<h1 className='text-3xl px-10 mb-4'>{item.title}</h1>
 							<h5 className='text-base font-extralight text-gray-400 px-10 mb-4'>{item.text}</h5>

@@ -64,6 +64,7 @@ const Hero = () => {
                                     src={item}
                                     width={134}
                                     height={28}
+                                    alt='item'
                                 />
                             </li>
                         ))

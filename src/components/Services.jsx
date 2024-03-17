@@ -21,7 +21,8 @@ const Services = () => {
                             src={service1}
                             width={800}
                             height={730}
-                        />
+                            alt='service1'
+                            />
                     </div>
                     <div className="ml-auto z-10 flex flex-col justify-start items-start max-w-[17rem]">
                         <h1 className='text-3xl lg:text-5xl w-full md:text-center text-start font-sora'>Smartest AI</h1>
@@ -34,7 +35,8 @@ const Services = () => {
                                         src={check}
                                         width={25}
                                         height={25}
-                                    />
+                                        alt='check'
+                                        />
                                     <h5 className=''>{item}</h5>
                                 </div> 
                             ))
@@ -48,7 +50,8 @@ const Services = () => {
                     src={gradient}
                     width={1700}
                     height={1700}
-                />
+                    alt='gradient'
+                    />
             </div>
         </div>
         <div className="relative lg:grid lg:grid-cols-2 lg:space-x-6">
@@ -60,7 +63,8 @@ const Services = () => {
                             src={service2}
                             width={800}
                             height={730}
-                        />
+                            alt='service2'
+                            />
                     </div>
                     <div className="absolute left-8 bottom-8 lg:mx-6 lg:mb-12">
                         <h1 className='text-3xl lg:text-5xl w-full text-start font-sora'>Photo editing</h1>
@@ -77,7 +81,8 @@ const Services = () => {
                         src={gradient}
                         width={1700}
                         height={1700}
-                    />
+                        alt='gradient'
+                        />
                 </div>
             </div>
             <div className="card2">
@@ -94,7 +99,8 @@ const Services = () => {
                                             src={item}
                                             width={24}
                                             height={24}
-                                        />    
+                                            alt='item'
+                                            />    
                                     </div>
                                 ))
                             }
@@ -106,6 +112,7 @@ const Services = () => {
                                     src={service3}
                                     width={1700}
                                     height={1700}
+                                    alt='service3'
                                 />
                                 <div className="absolute bottom-0 w-full">
                                     <VideoBar/>

@@ -34,6 +34,7 @@ const HeroImage = ({posX, posY}) => {
                                 src={notification1}
                                 width={50}
                                 height={50}
+                                alt='notification1'
                                 />
                         </div>
                         <div className="">
@@ -41,12 +42,13 @@ const HeroImage = ({posX, posY}) => {
                             <div className="flex flex-row">
                                 {
                                     notificationImages.map((item, index) => (
-                                        <div className="">
+                                        <div key={index} className="">
                                             <Image 
                                                 className='rounded-full'
                                                 src={item}
                                                 width={20}
                                                 height={20}
+                                                alt='item'
                                             />
                                         </div>
                                     ))
@@ -64,6 +66,7 @@ const HeroImage = ({posX, posY}) => {
                                             src={item}
                                             width={24}    
                                             height={24}
+                                            alt='item'
                                         />    
                                     </div>
                                 ))
@@ -78,6 +81,7 @@ const HeroImage = ({posX, posY}) => {
                         src={robot}
                         width={1024}
                         height={490}
+                        alt='robot'
                     />
                 </div>
                 <div className='bg-gray-800 h-[1.4rem] rounded-b-[0.9rem] mx-[1rem]'/>

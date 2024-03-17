@@ -21,6 +21,7 @@ export default function Header(){
                     src={brainwave}
                     width={180}
                     height={40}
+                    alt="brainwave"
                 />
                 <div className="lg:hidden ml-auto text-white">
                     <Button className={`menu text-white ${toggle ? 'opened' : ''}`} onClick={toggleHandler} border>

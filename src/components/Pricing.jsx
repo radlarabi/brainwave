@@ -12,6 +12,7 @@ const Pricing = () => {
                 src={smallSphere}
                 width={255}
                 height={255}
+                alt='smallSphere'
             />
         </div>
         <div className="flex flex-col justify-start md:justify-center">
@@ -62,6 +63,7 @@ const Pricing = () => {
                                             src={check}
                                             width={25}
                                             height={25}
+                                            alt='check'
                                         />
                                         <h5 className='text-sm'>{subItem}</h5>
                                     </div>

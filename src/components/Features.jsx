@@ -29,7 +29,8 @@ const Features = () => {
                                         src={benefitImage2}
                                         width={350}
                                         height={350}
-                                    />
+                                        alt='benefitImage2'
+                                        />
                                 </div>
                             }
                             {/* 
@@ -45,6 +46,7 @@ const Features = () => {
                                     src={item.iconUrl}
                                     width={50}
                                     height={50}
+                                    alt='iconUrl'
                                 />
                                 <p className='text-xs font-bold uppercase ml-auto font-code-pro'>Explore more</p>
                                 <div className="m-2 bg-blue z-50">
